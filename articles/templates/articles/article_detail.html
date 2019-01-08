@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<br>
+<br>
+<div class="article-detail">
+    <div class="article">
+        {% if article.image.url %}
+        <center><img src="{{ article.image.url }}" width="100%"></center>
+        {% endif %}
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.body }}</p>
+        <p>{{ article.date }}</p>
+    </div>
+</div>
+{% endblock %}
